@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './Page/header';
+import Topbar from './Page/topbar';  
+import Home from './Page/home';
+import './App.css';
+import Footer from './Page/Footer';
+import Contact from './Page/contact';
+import Aboutus from './Page/About-us';
+import AirFreight from './Page/AirFreight';
+import SeaFreight from './Page/SeaFreight';
+import LandTransport from './Page/LandTransport';
+import WareHousing from './Page/WareHousing';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <Topbar />
+      <Header />
+      <Routes>
+        <Route path="/services/warehousing" element={<WareHousing />} />
+        <Route path="/services/land-transport" element={<LandTransport />} />
+        <Route path="/services/sea-freight" element={<SeaFreight />} />
+        <Route path="/services/air-freight" element={<AirFreight />} />
+        <Route path="/products" element={<Home />} />
+        <Route path="/about" element={<Aboutus />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
+      <Footer/>
+    </Router>
+  );
 }
 
-export default App
+export default App;
