@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    width: 100vw; /* Ensures full viewport width */
+    font-family: "Changa", serif; /* Use 'sans-serif' for better font fallback */
+    font-optical-sizing: auto;
+    font-weight: 400; /* Default weight, change as needed */
+    font-style: normal;
+}
