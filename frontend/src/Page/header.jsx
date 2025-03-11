@@ -6,7 +6,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const pages = ['Home', 'Services', 'About', 'Contact'];
 const serviceOptions = ['Air Freight', 'Sea Freight', 'Land Transport', 'Warehousing'];
-const settings = ['Dashboard', 'Logout'];
+const settings = ['Register', 'Login'];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -119,8 +119,8 @@ function Header() {
             <Menu anchorEl={anchorElUser} open={Boolean(anchorElUser)} onClose={handleCloseUserMenu}>
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Link to={`/${setting.toLowerCase()}`} style={{ color: 'inherit', textDecoration: 'none', fontFamily: '"Changa", sans-serif' }}>
-                    <Typography>{setting}</Typography>
+                  <Link to={`/${setting.toLowerCase()}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <Typography sx={{ fontFamily: '"Changa", sans-serif' }}>{setting}</Typography>
                   </Link>
                 </MenuItem>
               ))}

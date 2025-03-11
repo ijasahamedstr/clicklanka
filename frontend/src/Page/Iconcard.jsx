@@ -10,7 +10,7 @@ function IconCard() {
   const handleServiceChange = (e) => setService(e.target.value);
 
   const handleSendMessage = () => {
-    const message = `Name: ${name}\nService: ${service}`;
+    const message = `Name: ${name}\nService: ${service}\nContact Number: +94770683809`; // Add the contact number here
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
     window.open(whatsappUrl, "_blank");

@@ -11,6 +11,7 @@ import AirFreight from './Page/AirFreight';
 import SeaFreight from './Page/SeaFreight';
 import LandTransport from './Page/LandTransport';
 import WareHousing from './Page/WareHousing';
+import Register from './Page/Register';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Topbar />
       <Header />
       <Routes>
+        <Route path="/register" element={<Register />} />
         <Route path="/services/warehousing" element={<WareHousing />} />
         <Route path="/services/land-transport" element={<LandTransport />} />
         <Route path="/services/sea-freight" element={<SeaFreight />} />
