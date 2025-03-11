@@ -37,8 +37,10 @@ function Header() {
           
           {/* Logo Section */}
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <img src="https://i.ibb.co/gMKsF5Fd/image-1.webp" alt="Logo" 
-              style={{ height: '70px', marginRight: '10px', padding: '15px' }} />
+            <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
+              <img src="https://i.ibb.co/gMKsF5Fd/image-1.webp" alt="Logo" 
+                style={{ height: '70px', marginRight: '10px', padding: '15px' }} />
+            </Link>
 
             {/* Desktop Navigation */}
             <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 3 }}>
