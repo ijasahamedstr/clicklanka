@@ -17,7 +17,14 @@ function IconCard() {
   };
 
   return (
-    <Box sx={{ backgroundColor: "#FFFFFF", padding: "50px 0", marginTop: { xs: "0px", md: "-150px" }, paddingLeft: "35px" }}>
+    <Box sx={{ 
+        backgroundColor: "#FFFFFF", 
+        padding: "50px 0", 
+        marginTop: { xs: "0px", md: "-150px" }, 
+        paddingLeft: "35px", 
+        marginLeft: "15px",  // Added marginLeft
+        marginRight: "15px"  // Added marginRight
+      }}>
       <Grid container spacing={4} justifyContent="center">
         {/* Best Prices Card */}
         <Grid
